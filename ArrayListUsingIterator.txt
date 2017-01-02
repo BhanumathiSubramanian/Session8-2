@@ -1,0 +1,48 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+
+class Change
+{
+  public void student()
+  {
+    	String myname;
+	List names = new ArrayList();
+    	Scanner scanner  = new Scanner(System.in);
+    	
+    	System.out.println("Enter the names: ");
+        try
+        {
+            for(int i=0;i<=4;i++)
+            {
+              System.out.println("My Name is:");
+              myname = scanner.nextLine();
+              names.add(myname);
+            }
+        }
+        catch(Exception e)
+        {
+          System.out.println(e);
+        }
+    	System.out.println("Using Iterator");
+    	
+	Iterator iterator = names.iterator();
+    	while(iterator.hasNext())
+        {
+          System.out.println(iterator.next());
+        }
+    	 
+  }
+  
+}
+
+class CollectionExample {
+  public static void main(String[] args) {
+    
+    Change obj = new Change();
+    obj.student();
+    
+  }
+}
